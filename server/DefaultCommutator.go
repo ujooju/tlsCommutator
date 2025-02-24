@@ -7,5 +7,5 @@ import (
 )
 
 func DefaultCommutator(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, config.GlobalConfig.DestIp+":"+config.GlobalConfig.Port, http.StatusSeeOther)
+	http.Redirect(w, r, "http://"+config.GlobalConfig.DestIp+":"+config.GlobalConfig.Port, http.StatusSeeOther)
 }
